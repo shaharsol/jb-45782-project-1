@@ -1,0 +1,157 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-image: url('tile.jpg');
+}
+
+.playfair-display {
+    font-family: "Playfair Display", serif;
+    border: 1px black solid;
+    border-radius: 25px;
+    padding: 25px;
+    width: 200px;
+    text-align: center;
+    font-size: large;
+    color: darkred;
+    background-image: linear-gradient(to bottom left, chocolate, burlywood, white);
+    box-shadow: 5px 5px 5px gray;
+}
+
+#whole_container {
+    display: grid;
+    grid-template-rows: 1fr 2fr 4fr;
+    height: 100%;
+}
+
+#whole_container>#Main_Headline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#whole_container>#The_Input_Notebook {
+    display: grid;
+    grid-template-rows: 4fr 2fr;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-image: url('formbg.jpg');
+    background-size: 100% 30%;
+    height: 90%;
+}
+
+#The_Input_Notebook>form {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+form>#Writing_a_Task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Writing_a_Task>textarea {
+    width: 400px;
+}
+
+form>#Date_of_Destination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form>#Time_of_Destination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form>#Save_Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Reset_Button {
+    margin: auto;
+    background-color: burlywood;
+}
+
+@media (max-width:1085px) {
+    form>#Writing_a_Task {
+        background-color: wheat;
+    }
+}
+
+#whole_container>#Tasks_Container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.One_Note,
+.One_Note_Load {
+    background-image: url('notebg.png');
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr 1fr;
+    margin: 10px;
+}
+
+.One_Note:nth-last-child(1) {
+    animation: popping 1s ease-in;
+}
+
+@keyframes popping {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.One_Note_Deletion {
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+}
+
+.One_Note_Deletion>button {
+    background-color: burlywood;
+    display: none;
+}
+
+.One_Note_Load:hover button {
+    display: block;
+}
+
+.One_Note:hover button {
+    display: block;
+}
+
+.One_Note_Text_Area {
+    display: flex;
+    grid-row: 2;
+    align-items: center;
+}
+
+.One_Note_Text_Area>textarea {
+    height: 90%;
+    background: transparent;
+    border: transparent;
+}
+
+.One_Note_D_o_D {
+    grid-row: 3;
+    margin-left: 5px;
+}
+
+.One_Note_T_o_D {
+    grid-row: 4;
+    margin-left: 5px;
+}
