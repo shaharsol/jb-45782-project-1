@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>project-1</title>
+  <script defer src="app.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grid-container">
+    <header>
+      <h1 class="headline">My task board</h1>
+      <form onsubmit="addNote(event)">
+        <div class="container">
+          <label for="task-details" >task information:</label>
+          <textarea id="task-details" ></textarea><br><br>
+
+          <div class="date-time">
+            <label for="task-date">date:</label>
+            <input type="date" id="task-date" >
+            <!--  -->
+            <label for="task-time">time:</label>
+            <input type="time" id="task-time">
+          </div>
+
+          <div>
+            <button class="buttons" >submit</button>
+            <button class="buttons" type="reset">reset</button>
+          </div>
+        </div>  
+      </form>
+    </header>
+    <div class="main" id="main">
+
+      
+
+    </div>
+  </div>  
+  <div class="ola" id="ola">
+    <img src="pics/notebg.png" alt="">
+  </div>
+  <button onclick="fadeIn()">fade</button>
+</body>
+</html>  
+
+
+
+
