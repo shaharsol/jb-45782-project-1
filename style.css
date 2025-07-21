@@ -1,0 +1,138 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(pics/tile.jpg);
+    place-items: center;
+
+}
+.headline{
+    font-family: roboto;
+    font-size: 45px;
+    text-align: center;
+
+}
+.grid-container{
+    display: grid;
+    grid-template-rows: 500px 1fr;
+    grid-template-columns: 1fr ;
+    height: auto;
+    width: 100%;
+
+}
+header{
+    place-items: center;
+}
+.container{
+    padding-top: 15px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    height: 342px;
+    width: 470px;
+    background-image: url(pics/formbg.jpg);
+    grid-row: 1;
+    grid-column: 1;
+
+}
+.main{
+    grid-row: 2;
+    grid-column: 1;
+}
+label{
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+textarea{
+    width: 300px;
+    height: 90px; 
+    border: 2px solid black; 
+    border-radius: 5px; 
+}
+input{
+    height: 30px;
+    width: auto;
+    border-radius: 5px;
+    border: 2px solid black;
+    
+}
+.buttons{
+    margin: 24.70px 10px;
+    height: 66px;
+    width: 200px;
+    background-color: rgb(227, 222, 152);
+    border: 2px solid black;
+    border-radius: 15px;
+    font-size: x-large;
+    transition: 0.2s;
+}
+.buttons:hover{
+    background-color: rgb(122, 122, 76);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.note{
+    background-image: url(pics/notebg.png);
+    height: 250px;
+    width: 200px;
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+}
+.note.fadein{
+    animation: fadeIn 0.5s ease-in-out;
+}
+.text-info{
+    height: 160px;
+    width: 160px;
+    top: 25px;
+    left: 10px;
+    position: absolute;
+    overflow-x: auto;
+    overflow-wrap: break-word;
+}
+.timedate{
+    height: 20px;
+    width: 10px;
+    position: absolute;
+    top: 190px;
+    left: 10px;
+    height: 40px;
+    width: 100px;
+}
+.cross-mark{
+    margin-left:40px;
+    font-size: x-large;
+    opacity :0;
+    transition: opacity 0.3s ease-in-out;
+}
+.cross-mark a {
+    text-decoration:none;
+
+}
+.note:hover .cross-mark{
+    opacity: 1 ;
+}
+@media (width <630px) {
+    .cross-mark{
+        opacity : 1;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        
+    }
+    to{
+        opacity:1;
+        
+    }
+}
+
