@@ -17,14 +17,14 @@
       <form onsubmit="addNote(event)">
         <div class="container">
           <label for="task-details" >task information:</label>
-          <textarea id="task-details" ></textarea><br><br>
+          <textarea id="task-details" required></textarea><br><br>
 
           <div class="date-time">
             <label for="task-date">date:</label>
-            <input type="date" id="task-date" >
+            <input type="date" id="task-date" required>
             <!--  -->
             <label for="task-time">time:</label>
-            <input type="time" id="task-time">
+            <input type="time" id="task-time" required>
           </div>
 
           <div>
@@ -40,10 +40,7 @@
 
     </div>
   </div>  
-  <div class="ola" id="ola">
-    <img src="pics/notebg.png" alt="">
-  </div>
-  <button onclick="fadeIn()">fade</button>
+
 </body>
 </html>  
 
