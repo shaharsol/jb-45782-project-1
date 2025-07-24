@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Board Manager</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="Project1-style-css/style.css">
+</head>
+
+<body>
+    <h1 class="general-header text-center">My Task Board</h1>
+
+    <div class="notebook-form text-center">
+        <form id="form" onsubmit="addNoteToBoard(event)" class="form-class">
+            <label class="form-label-text fw-bold fs-4">Task info:</label>
+            <textarea id="textTask" class="form-control" placeholder="Enter Task..." required></textarea>
+
+            <label class="form-label-date fw-bold fs-4">Task date:</label>
+            <input id="dateTask" class="form-control input-date" type="date" required>
+
+            <label class="form-label-time fw-bold fs-4">Task time:</label>
+            <input id="timeTask" class="form-control input-time" type="time" required>
+
+            <button class="btn btn-dark me-5 btn-sub">Add note</button>
+            <button class="btn btn-outline-dark btn-res" type="reset">Clear form</button>
+        </form>
+    </div>
+    <button class="btn btn-danger btn-res clear-board" onclick="clearBoard()">Clear board</button>
+
+    <div id="noteBoard" class="note-board">
+
+    </div>
+</body>
+
+</html>
