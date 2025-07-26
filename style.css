@@ -1,0 +1,123 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url(img/tile.jpg);
+  background-repeat: repeat;
+  background-size: auto;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#taskForm {
+  background-image: url("img/formbg.jpg");
+  background-size: auto;
+  background-repeat: repeat;
+  padding: 20px;
+  border-radius: 15px;
+  width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#taskBoard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.board-title {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 48px;
+  color: black;
+  margin-top: 20px;
+}
+
+.form-control {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.task {
+  background-image: url("img/notebg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
+  width: 200px;
+  height: 250px;
+  padding: 40px 15px 15px 15px;
+  margin: 5px 0;
+  position: relative;
+}
+
+.task-text {
+  max-height: 140px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.task-time {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 14px;
+}
+.fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+.delete-btn {
+  display: none;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: whitesmoke;
+  border: none;
+  font-size: 18px;
+  color: red;
+  cursor: pointer;
+}
+
+
+.task:hover .delete-btn {
+  display: block;
+}
+
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: 'Permanent Marker', cursive;
+  position: relative;
+  margin-top: 40px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.footer:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #ffeb3b;
+}
