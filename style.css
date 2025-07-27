@@ -1,0 +1,117 @@
+h1 {
+    color: red;
+    text-align: center;
+    font-family: "Dancing Script", "Shadows into light", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 64px;
+    padding-bottom: 5%;
+    padding-top: 2%;
+}
+
+body {
+    background-image: url(images/tile.jpg);
+}
+
+header {
+    display: grid;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#task-info::placeholder {
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#task-form {
+    align-items: center;
+    padding-bottom: 3%;
+    margin: auto;
+}
+
+#task-info {
+    background-image: url(images/formbg.jpg);
+    text-align: left;
+    padding: 2%;
+}
+ 
+#tasks-container {
+    color: seagreen;
+    text-shadow: 1px 1px 2px black;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.task-container {
+    background-image: url(images/notebg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 450px;
+    width: 300px;
+    max-height: 400px;
+
+    display: grid;
+    grid-template-rows: 1fr 13fr 1fr;
+    margin-top: 40px;
+    padding-top: 15px;
+    position: relative;
+
+}
+
+.task-container p {
+    overflow-y: auto;
+    max-height: 90%;
+    padding-right: 20px;
+    padding-left: 20px;
+    word-break: break-word;
+}
+
+.task-container #buttonX {
+    display: none;
+}
+
+.task-container:hover #buttonX {
+    display: inline-block;
+}
+
+#buttonX {
+    position: absolute;
+    top: 35px;
+    right: 20px;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+div>label {
+    font-size: 20px;
+    color: blue;
+    text-shadow: 1px 1px 1px black;
+    background-color: rgba(255, 255, 255, 0.1);
+}
