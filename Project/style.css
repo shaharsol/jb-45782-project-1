@@ -1,0 +1,201 @@
+body {
+    background-image: url("ProjectBackground.jpg");
+}
+
+h1{
+    
+  font-family: "Manufacturing Consent", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
+
+}
+
+.notebookImage{
+    background-image: url("formbg.jpg");
+    width: 400px;
+    height: 550px;
+    background-size: cover;
+    background-position: center;
+    background-size: auto;
+    background-repeat: repeat;
+    margin: 0 auto;
+}
+
+label {
+    
+  display: block;
+  text-align: center;
+  font-size: 20px;
+
+
+    
+}
+
+textarea{
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+  display: block;
+  background-color: lightyellow; 
+  
+  font-size: 18px;                
+  width: 300px;  
+  padding: 10px;                  
+  border: 2px solid gray;         
+  border-radius: 5px;  
+}
+
+input {
+    width: 300px;
+  display: block;
+  margin: 0 auto;
+  display: block;
+  background-color: lightyellow; 
+  
+  font-size: 18px;                
+  width: 300px;                   
+  padding: 10px;                  
+  border: 2px solid gray;         
+  border-radius: 5px;             
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    text-emphasis: filled black;
+}
+
+.myButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;          
+    border-radius: 5px;          
+    font-size: 16px;             
+    
+  }
+
+  /*animation code start*/
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        
+    }
+    to {
+        opacity: 1;
+        
+    }
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.task-note {  /*The note*/
+    position: relative;
+  width: 250px;
+  height: 300px;
+  background-image: url("notebg.png"); /* your sticky note image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 60px 20px 20px 20px; /* top padding to avoid the pin */
+  font-size: 14px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+  flex-direction: column;
+}
+/*animation code end*/
+
+.note-date{
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.delete-note{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    
+    transition: opacity 0.3s ease;
+}
+
+.note-task {
+  /* Task text */
+  font-weight: bold;
+  margin-bottom: auto;
+  overflow: auto;
+  overflow-y: auto;
+  max-height: 235px;
+  padding-right: 10px;
+}
+
+#notes-container{
+  display: flex;
+  flex-wrap: wrap;            
+  flex-direction: row;        
+  
+}
+
+.task-note:hover .delete-note {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    /* padding: 5px; */
+  }
+
+  .notebookImage{
+    width: 70%;
+    height: 70%;
+  }
+
+  .inputBox {
+    width: 80%;
+    height: 20px;
+    font-size: 1rem;
+  }
+
+   textarea {
+    width: 90%;
+    height: 40px;
+  }
+
+  .task-note {
+    font-size: 0.9rem;
+    padding: 10px;
+    width: 193px;
+  }
+
+  .myButton{
+    width: 60%;
+    height: 30px;
+    text-size-adjust: 70%;
+    font-weight: bold;
+  }
+
+  .delete-note {
+    top: 10px;
+    right: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
