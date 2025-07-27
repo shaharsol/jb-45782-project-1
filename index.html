@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <script defer src="app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="parent">
+        <header>
+            <h1>My task board</h1>
+        </header> 
+        <div class="form-block">
+            <img src="projects/formbg.jpg" alt="">
+            <img src="projects/formbg.jpg" alt="">
+            <img src="projects/formbg.jpg" alt="">
+
+            <form id="taskForm" class="taskForm" onsubmit="addTask(event)">
+                <textarea name="task" id="task" required placeholder="enter your task"></textarea>
+                <div class="dateTime"><br>
+                    <input id="date" min="2025-07-01" max="2029-01-01" type="date" required>
+                    <input id="time" type="time" required>
+                </div>
+                <div class="form-button">
+                    <button class="btn btn-success">Save</button>
+                    <button class="btn btn-danger" type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+        <div id="notes" class="notes-container">
+            
+        </div>
+
+    </div>
+</body>
+
+
+</html>

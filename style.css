@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  height: 100%;
+  background-image: url(/projects/tile.jpg);
+  font-family: "Merienda", cursive;
+}
+.parent {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 20px;
+}
+
+header {
+  grid-row: 1;
+  padding-top: 5vh;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.form-block {
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.form-block img {
+  display: block;
+  width: 50vw;
+}
+
+.taskForm {
+  position: absolute;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+textarea {
+  background: transparent;
+  width: 42vw;
+  height: 10vw;
+  resize: none;
+  color: black;
+  font-size: 1rem;
+  padding: 0.5rem;
+  line-height: 2;
+  margin-left: 5rem;
+  /* margin: 0.3rem; */
+}
+
+.dateTime,
+.form-button {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  /* justify-content: center;
+    flex-direction: column; */
+}
+.dateTime {
+  margin-bottom: 0.3rem;
+  /* transform: scale(1); */
+}
+
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;   
+  grid-row: 3;
+  position: relative;
+  gap: 1rem;   
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+.note img {
+  object-fit: cover;
+  display: block;
+}
+
+.note {
+  position: relative;
+  display: inline-block;
+  margin: 1rem;
+  animation: fadeIn 0.6s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.note-content {
+  position: absolute;
+  inset: 0;
+  padding: 1.2rem 0 0 0.51rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* margin: 0; */
+}
+.note-content p {
+  margin: 0;
+  max-height: 160px;
+  max-width: 170px;
+  overflow-y: auto;
+}
+.note-delete {
+  align-self: flex-end;
+  background: transparent;
+  cursor: pointer;
+}
+
+.note-delete {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: black;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.note:hover .note-delete {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .note {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 90vw;
+    margin: 1rem auto;
+    height: auto;
+  }
+
+  .note-content {
+    position: absolute;
+    padding: 1.8rem 2rem 0rem 1rem;
+  }
+
+  .note-datetime {
+    position: absolute;
+    bottom: 0.3rem;
+    /* right: 9rem; */
+    text-align: left;
+
+  }
+
+  .note-delete {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .taskForm {
+    margin-top: 1rem;
+  }
+
+  textarea {
+    width: 80vw;
+    height: 40vw;
+    margin: 0;
+  }
+
+  .form-block img {
+    width: 90vw;
+    height: 15vh;
+    object-fit: cover;
+  }
+
+  .form-button {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 1rem;
+    gap: 0.5rem;
+  }
+
+  .form-button button {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .notes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .note-content p {
+  max-height: 170px;
+  max-width: 180px;
+  /* overflow-y: auto; */
+  }
+}
