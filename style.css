@@ -1,0 +1,91 @@
+body {
+    background:url(tile.jpg);
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #555;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20px;
+  }
+  
+  body form {
+    background: repeating-linear-gradient(white, white 28px, #cce5ff 29px, white 30px);
+    border-left: 5px solid red;
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #aaa;
+  }
+  
+  body #task-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+    margin: auto;
+    direction: ltr;
+  }
+  
+.task-card {
+  background: url("notebg - פתק צהוב.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  min-height: 220px;
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+  overflow-y: auto;
+  opacity: 0;
+}
+
+  
+  body #task-board .task-card.show {
+    opacity: 1;
+  }
+  
+  body #task-board .task-card:hover .delete-btn {
+    display: block;
+    padding: 15px;
+  }
+  
+  body #task-board .task-card p {
+    margin: 0;
+    overflow-y: auto;
+    height: 130px;
+  }
+  
+  body #task-board .task-card small {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 0.85em;
+    color: #555;
+  }
+  
+  body #task-board .task-card .delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    display: none;
+    cursor: pointer;
+    color: red;
+    font-size: 18px;
+  }
+  @media (max-width: 576px) {
+    #task-board {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+      padding: 10px;
+      gap: 10px;
+    }
+  
+    .task-card {
+      width: 100%;
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+
+    }
+  }
+  
