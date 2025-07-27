@@ -1,0 +1,192 @@
+html {
+    height: 100%;
+    margin: 0px;
+}
+
+body {
+    background-image:url(/photos/tile.jpg);
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#Note {
+    background-image:url(/photos/formbg.jpg);
+    grid-column: 3;
+    grid-row: 1, span 2;
+    background-repeat: repeat;
+    padding: 22px;
+    
+}
+
+form {
+    font-size: large;
+    padding: 29px;
+    padding-left: 75px;
+    margin: top 10px; ;
+}
+
+form > input {
+    border: none;
+    background: transparent;
+    padding: 19px;    
+    width: 453px;
+    outline: none;
+}
+
+input:focus {
+  border: none;
+}
+
+#mission-list {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr ;
+    grid-template-rows: auto ;
+    display: flex;
+    grid-column: 1;
+    grid-row: 1;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 96%;
+}
+
+#mission-list>div {
+    background-image: url(/photos/notebg.png);
+    height: 255px;
+    width: 200px;
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr;
+    grid-row: 1;
+    justify-content: center;
+    align-content: flex-start;
+    position: relative;
+}
+
+#mission-list>div>div:nth-child(1) {
+    font-size: small;
+    padding-top: 6px;
+    padding-right: 24px;
+    overflow:scroll;
+    overflow-x:hidden;
+    overflow-y:auto;
+    overflow-anchor: none;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-gutter: auto;
+    margin: 27px;
+    margin-top: 41px;
+    height: 126px;
+    margin-bottom: 0px;
+    margin-left: 38px;
+    width:124px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#mission-list>div>div:nth-child(2) {
+    margin-left: 36px;
+    font-size: small;
+}
+
+#mission-list>div>div:nth-child(3) {
+    margin-left: 36px;
+    font-size: small;
+}
+
+#mission-list>div>div:nth-child(4){
+    background: none;
+    border: none;
+    color: red;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 17px;
+    right: 29px;
+}
+
+#mission-list>div>div::-webkit-scrollbar-thumb {
+    width:1px;
+}
+
+#date {
+    padding-top: 30px;
+}
+
+#time {
+    padding-top: 20px;
+    padding-bottom: 32px;
+}
+
+#mission {
+    height: 40px;
+}
+
+h1 {
+    grid-column: 3;
+    grid-row: 1;
+    font-family: "Fascinate", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+div {
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr;
+    display:flex;
+}
+
+/* Fade out */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Fade in */
+.item {
+    transition: opacity 0.5s ease;
+}
+
+.delete-btn {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.item:hover .delete-btn {
+    opacity: 1;
+}
+
+button {
+    height: 28px;
+    line-height: 24px;
+    margin: 2px 0 0 0;
+    background-color: none;
+}
+
+label{
+    font-weight: bolder;
+}
+
+
