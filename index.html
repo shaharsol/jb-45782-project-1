@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script defer src="./app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="heading">
+        <h1>My Task Board</h1>
+    </div>
+
+    <div id="formDiv">
+        <form id="taskForm"  onsubmit="addNote(event)">
+            <div class="mb-3">
+                <label for="taskDescription" class="form-floating">Enter task description</label>
+                <textarea id="taskDescription" required minlength="10" maxlength=""></textarea>
+            </div>
+            <div>
+                <label for="submissionDate" class="form-floating">Enter submission date</label>
+                <input id="submissionDate" type="date" required>
+            </div>
+            <div>
+                <label for="submissionTime" class="form-floating">Enter submission hour</label>
+                <input id="submissionTime" type="time" required>
+            </div>
+            <div id="buttons">
+                <button type="submit">Add Note</button>
+                <button type="button"  onclick="clearForm()">Clear</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div id="noteContainer">
+        
+
+    </div>
+
+</body>
+
+</html>

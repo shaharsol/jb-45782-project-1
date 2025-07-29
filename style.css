@@ -1,0 +1,213 @@
+h1 {
+    text-align: center;
+    font-family: "Bitcount Grid Double";
+
+}
+
+#formDiv {
+    display: flex;
+    justify-content: center;
+}
+
+#taskForm {
+
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    width: 550px;
+    background-image: url(images/formbg.jpg);
+    font-style: normal;
+    font-weight: bolder;
+    background-repeat: repeat-y;
+    background-position: center;
+    padding-left: 60px;
+
+
+}
+
+
+
+
+body {
+    size: 100%;
+    background-image: url(images/tile.jpg);
+    background-repeat: repeat;
+    background-size: auto;
+    
+}
+
+
+#noteContainer {
+
+    display: grid;
+    height: 100%;
+    grid-template-rows: 1fr 4fr 8fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    position: relative;
+}
+
+
+#noteContainer div {
+
+
+    padding-top: 10px;
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr 1fr;
+    background-image: url(images/notebg.png);
+    background-size: cover;
+    padding-left: 10px;
+    height: 400px;
+    margin-left: 2rem;
+    font-weight: bold;
+    position: relative;
+
+
+
+
+}
+
+#text {
+    grid-row: 2;
+    padding-top: 50px;
+    width: 250px;
+    height: 320px;
+    text-align: left;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow: auto;
+    font-weight: bold;
+    overflow: auto;
+    
+
+}
+
+
+
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.7;
+    }
+
+    30% {
+        opacity: 0.3;
+    }
+
+    70% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.note.fadeIn {
+    animation: fadeIn 2s ease-in;
+    position: relative;
+
+
+}
+
+.note:hover .deleteButton {
+    opacity: 1;
+}
+
+
+
+.deleteButton {
+
+    grid-row: 1;
+    margin-top: 25px;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    top: 0.3rem;
+    right: 0.3rem;
+
+}
+
+#buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    width: 95%;
+
+}
+#date{
+    grid-row: 3;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+#time{
+    grid-row: 4;
+    padding-bottom: 0;
+}
+
+
+@media (max-width: 800px) {
+
+    #noteContainer {
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        grid-template-rows: unset;
+        position: relative;
+
+    }
+
+    #noteContainer div {
+        position: relative;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-rows: 1fr 6fr 1fr 1fr;
+        width: 100%;
+        height: auto;
+        max-height: 600px;
+        font-size: x-large;
+
+
+    }
+
+    #text {
+        margin-top: 20px;
+        width: auto;
+        max-width: 80%;
+        word-wrap: break-word;
+        word-break: break-word;
+        box-sizing: border-box;
+
+    }
+
+    .deleteButton {
+
+        /* position: absolute;
+        margin-top: 60px;
+        margin-right: 80px;
+        margin-top: 25px; */
+        /* align-items: center;
+        position: absolute;
+        right: 20;
+        top: 4;
+        opacity: 0;
+         */
+        margin-top: 25px;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        opacity: 0;
+        top: 2.5rem;
+        right: 6.2rem;
+
+    }
+}
